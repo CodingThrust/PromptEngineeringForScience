@@ -6,11 +6,11 @@ Human-AI collaboration workflows for scientific and academic tasks. Each flow pr
 
 | Category | Flows | Description |
 |----------|-------|-------------|
-| [Paper Writing](paper-writing/flow.md) | Paper Draft Flow | From raw notes to polished manuscript |
+| [Paper Writing](paper-writing/) | [Paper Draft](paper-writing/flow.md) · [Grant Proposal](paper-writing/grant-flow.md) | From raw notes to polished manuscript |
 | [Coding](coding/coding-flow.md) | Vibe Coding | AI-assisted programming workflows |
 | [Research](research/flow.md) | Discovery & Planning | Literature review, gap identification, methodology |
 | [Data Analysis](data-analysis/flow.md) | Analysis Pipelines | EDA, statistics, ML, reproducibility |
-| [Teaching](teaching/) | [Slides](teaching/slides-flow.md) · [Exam](teaching/exam-flow.md) · [Evaluation](teaching/evaluation-flow.md) | Course material generation and grading |
+| [Teaching](teaching/) | [Slides](teaching/slides-flow.md) · [Quiz](teaching/quiz-flow.md) · [Homework](teaching/homework-flow.md) · [Exam](teaching/exam-flow.md) · [Evaluation](teaching/evaluation-flow.md) | Course material generation and grading |
 | [Workflow Automation](workflow-automation/mcp-flow.md) | MCP Server | Building AI tool integrations |
 
 ## Philosophy

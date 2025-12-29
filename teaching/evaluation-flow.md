@@ -49,7 +49,3 @@ based on the generated markdown file, rank students:
 First submission should have doubled.
 For AI submission, the score should be halved.
 ```
-
-# Example 2: UFUG2103 - Linear Algebra
-
-
