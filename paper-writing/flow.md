@@ -61,7 +61,7 @@ Implement plan.md, generate paper in <Physical Review X> style.
 ```
 
 ```
-Make sure all symbols introduced before used.
+Make sure all symbols and concepts are introduced before they are used.
 ```
 
 ```
@@ -78,10 +78,6 @@ Comment on how to improve to meet high standards of <journal>. Be critical.
 
 ```
 Verify all facts in this paper.
-```
-
-```
-Make sure all symbols and concepts are introduced before they are used.
 ```
 
 ### Diagrams
