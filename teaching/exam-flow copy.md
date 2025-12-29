@@ -1,6 +1,6 @@
 # Generate a exam paper
 
-[Prompt]:
+(Prompt)
 
 ```
 Generate a final exam paper, in typst format.
