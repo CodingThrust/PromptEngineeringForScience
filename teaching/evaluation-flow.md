@@ -1,3 +1,4 @@
+# Example 1: AMAT5315 - Modern Scientific Computing
 ## Merge PRs to this repo
 **Human**: Clone the homework repo to this working directory.
 
@@ -19,8 +20,9 @@ For PRs hard to decide, list them in chat.
 Read all readmes in each assignment folder, try to generate answers.
 ```
 
+Best practise: make an example
 ```
-Base on the submissions, for student Zhulin, make a table, rows are assignments, cols are the following facts
+Base on the submissions, for student XXX, make a table, rows are assignments, cols are the following facts
 1. For coding, execution output is included? Note: some outputs are in markdown, some are in images.
 2. The first submission of each assignment?
 3. Detect if a submission is AI generated
@@ -47,3 +49,7 @@ based on the generated markdown file, rank students:
 First submission should have doubled.
 For AI submission, the score should be halved.
 ```
+
+# Example 2: UFUG2103 - Linear Algebra
+
+
