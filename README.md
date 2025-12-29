@@ -1,32 +1,34 @@
 # Prompt Engineering For Science
 
-A curated collection of AI prompts for scientific and academic work.
+Human-AI collaboration workflows for scientific and academic tasks. Each flow provides a step-by-step path for humans to follow when interacting with AI.
 
-## Categories
+## Flows
 
-| Category | Description | Prompts |
-|----------|-------------|---------|
-| [Paper Writing](paper-writing/prompts.md) | Drafting, editing, and polishing scientific manuscripts | 100+ prompts |
-| [Coding](coding/prompts.md) | Scientific programming, debugging, and code optimization | 90+ prompts |
-| [Research](research/prompts.md) | Research discovery, planning, and methodology | 90+ prompts |
-| [Data Analysis](data-analysis/prompts.md) | Statistics, visualization, and interpretation | 100+ prompts |
-| [Teaching](teaching/prompts.md) | Course design, lesson planning, and student engagement | 100+ prompts |
-| [Workflow Automation](workflow-automation/prompts.md) | Email, scheduling, and productivity optimization | 100+ prompts |
+| Category | Flows | Description |
+|----------|-------|-------------|
+| [Paper Writing](paper-writing/flow.md) | Paper Draft Flow | From raw notes to polished manuscript |
+| [Coding](coding/coding-flow.md) | Vibe Coding | AI-assisted programming workflows |
+| [Research](research/flow.md) | Discovery & Planning | Literature review, gap identification, methodology |
+| [Data Analysis](data-analysis/flow.md) | Analysis Pipelines | EDA, statistics, ML, reproducibility |
+| [Teaching](teaching/) | [Slides](teaching/slides-flow.md) · [Exam](teaching/exam-flow.md) · [Evaluation](teaching/evaluation-flow.md) | Course material generation and grading |
+| [Workflow Automation](workflow-automation/mcp-flow.md) | MCP Server | Building AI tool integrations |
 
-## Quick Start
+## Philosophy
 
-1. Navigate to the category relevant to your task
-2. Find prompts that match your needs
-3. Replace `[bracketed placeholders]` with your specific details
-4. Iterate and refine based on AI responses
+Unlike static prompt lists, **flows** are designed as structured paths that guide human-AI collaboration:
+
+1. **Human prepares** → materials, context, constraints
+2. **AI generates** → drafts, suggestions, alternatives  
+3. **Human reviews** → quality control, direction changes
+4. **Iterate** → refine until satisfied
 
 ## Best Practices
 
-- **Be Specific**: Provide context, constraints, and goals
-- **Verify Outputs**: Always fact-check AI-generated content
+- **Prepare good inputs**: AI output quality depends on your input quality
+- **Use examples**: Show AI the style/format you want (model papers, templates)
+- **Verify everything**: Always fact-check AI-generated content
+- **Stay in control**: Human judgment guides the process at each step
 - **Iterate**: Use follow-up prompts to refine results
-- **Maintain Voice**: Adapt AI suggestions to your style
-- **Ethical Use**: Use AI as an assistant, not a replacement for expertise
 
 ---
 
