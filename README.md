@@ -2,6 +2,8 @@
 
 Human-AI collaboration workflows for scientific tasks.
 
+[Warning: under construction.]
+
 ## Philosophy
 - **Be open**: Describe what you need, not how to do it. Instead of "use Quantum ESPRESSO for DFT", ask "I want to simulate a hydrogen molecule—what are the approaches? Compare methods and suggest the best tool." Expect solutions beyond your assumptions.
 - **Manage context**: Keep relevant files in your workspace—source code, examples, templates. Reference them with `@file` to ground AI responses.
