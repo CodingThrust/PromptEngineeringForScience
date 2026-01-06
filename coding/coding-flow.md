@@ -124,76 +124,27 @@ Before implementation, ask the AI to:
 
 ---
 
-## Step 2: Verify the Work
+## Step 2: Test → Verify → Iterate
 
-Should you check AI-generated code line by line? **Not necessarily.** But blind trust is dangerous. Use systematic verification:
+**Don't read code line-by-line.** Instead, verify through tests:
 
-### Testing
-- Improve test coverage—design tests for edge cases the AI might miss
-- Include property-based tests for algorithmic code
-- Test failure modes, not just happy paths
+1. **Write a test** that captures your expectation
+2. **Let AI run it** and analyze the result
+3. **Review the proof** — did it pass? Does the explanation make sense?
+4. **If not satisfied** — write another test that expresses your intuition more precisely
+5. **Repeat** until all your tests pass and you trust the result
 
-### Performance
-- Generate profiling reports and establish benchmarks
-- Compare against baseline or known implementations
-- Watch for accidentally quadratic algorithms
-
-### Security (if applicable)
-- Run dependency audits (`npm audit`, `cargo audit`, `pip-audit`)
-- Check for hardcoded secrets or insecure defaults
-- Review authentication/authorization logic manually
-
-### Documentation
-- Document algorithm design and key implementation decisions
-- Ensure the AI explains *why*, not just *what*
-- Generate architecture diagrams for complex systems
+> The key insight: Express your knowledge through tests, not by editing code. Your domain expertise becomes test cases.
 
 ---
 
-## Step 3: Debug Iteratively
+## Step 3: Document & Release
 
-Things will break. Here's how to debug effectively with AI:
+Let AI handle the busywork:
 
-### Sharing Errors
-- Paste the **full error message** and stack trace
-- Include relevant code context (the AI may have forgotten)
-- Describe what you expected vs. what happened
+1. **Document** — Ask AI to generate README, API docs, and architecture diagrams. You are the first user of your package, provide use cases, let AI to include them in the documentation, iterate until you are satisfied.
+2. **Version** — Bump version ([semver](https://semver.org/)), update changelog
+3. **Publish** — Register on PyPI, crates.io, npm, etc.
+4. **Tag** — Create GitHub Release with notes
 
-### Iteration Strategies
-- **Small steps**: Fix one issue at a time
-- **Checkpoints**: Save working states before major changes
-- **Fresh start**: If context is polluted, summarize the problem and start a new conversation
-
-### Know When to Intervene
-Sometimes it's faster to fix it yourself:
-- Simple typos or off-by-one errors
-- When the AI keeps suggesting the same broken approach
-- Domain-specific bugs requiring specialized knowledge
-
----
-
-## Step 4: Release
-
-### Version Management
-- Bump version numbers following [semver](https://semver.org/)
-- Update changelog with meaningful descriptions
-
-### Package Registration
-- Publish to appropriate registry: PyPI, crates.io, npm, JuliaRegistrator, etc.
-- Ensure metadata (description, keywords, license) is complete
-
-### Git Hygiene
-- Tag the release on GitHub
-- Create a GitHub Release with notes
-- Consider automated release workflows
-
----
-
-## Team Collaboration
-
-When working with others on AI-assisted code:
-
-- **PR descriptions**: Note which parts were AI-generated and what you verified
-- **Code ownership**: You're responsible for AI code you commit—review it as if a junior wrote it
-- **Knowledge sharing**: Document insights from AI interactions that benefit the team
-- **Consistency**: Agree on AI tool usage and verification standards as a team
+> For teams: You own what you commit. Note AI-generated parts in PRs and agree on verification standards.
