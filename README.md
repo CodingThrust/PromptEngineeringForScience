@@ -15,9 +15,9 @@ Human-AI collaboration workflows for scientific tasks.
 |----------|-------|
 | [Paper Writing](paper-writing/flow.md) | Literature → Plan → Draft → Polish |
 | [Coding](coding/coding-flow.md) | Build · Debug · Explain |
-| [Research](research/flow.md) | Literature review · Gap identification |
-| [Teaching](teaching/) | [Slides](teaching/slides-flow.md) · [Quiz](teaching/quiz-flow.md) · [Homework](teaching/homework-flow.md) · [Exam](teaching/exam-flow.md) · [Evaluation](teaching/evaluation-flow.md) |
-| [MCP](workflow-automation/mcp-flow.md) | Build AI tool servers |
+| Research | Literature review · Gap identification |
+| Teaching | Slides · Quiz · Homework · Exam · Evaluation |
+| MCP | Build AI tool servers |
 
 ### Universal Workflow
 1. **Human prepares** → materials, context
