@@ -1,6 +1,6 @@
 # Vibe Coding
 
-**Vibe coding** is a development style where you describe what you want in natural language and let AI coding assistants (Claude Code, Cursor, GitHub Copilot, etc.) generate the implementation. This guide helps scientists and researchers adopt vibe coding effectively—shipping working code faster while maintaining quality and understanding.
+**Vibe coding** is a development style where you describe what you want in natural language and let AI coding assistants (Claude Code, Cursor, GitHub Copilot, etc.) generate the implementation. This guide helps scientists and researchers write correct code without reading it line-by-line.
 
 ```mermaid
 %%{init: {'theme': 'base', 'flowchart': { 'nodeSpacing': 20, 'rankSpacing': 40 }}}%%
@@ -49,39 +49,13 @@ flowchart LR
     linkStyle 4 stroke:#e53e3e,stroke-width:2px
 ```
 
-**The Loop**: You supply *test cases* → LLM produces *verification* → Iterate until satisfied. The point is, never touch code, if the code is not satisfactory, provide your intuition with more tests!
-
----
-
-## High-Level Wisdom
-
-Before diving into the workflow, some foundational knowledge remains essential. Paradoxically, **conceptual understanding becomes more important** in the era of vibe coding—you need to recognize good solutions, catch AI mistakes, and guide the AI toward optimal approaches.
-
-### Math & Domain Knowledge
-- Domain-specific and outside the scope of this guide, but essential for validating AI output in your field.
-
-### Algorithmic Thinking
-- **Paradigms**: greedy, divide-and-conquer, dynamic programming, backtracking, branch-and-bound
-- **Optimization techniques**: linear/integer programming, convex optimization, heuristics (genetic algorithms, simulated annealing)
-- Know when to suggest an approach to the AI vs. letting it choose.
-
-### Computational Theory
-- **Complexity**: time/space complexity, Big-O notation, amortized analysis
-- **Hardness classes**: P, NP, NP-complete, NP-hard—know when a problem is fundamentally hard
-- **Foundational concepts**: expression trees, automata, Turing completeness
-
-### Modern Software Engineering
-- **Tooling**: version control (git), code review, CI/CD pipelines, containerization
-- **Methodologies**: agile, iterative development, test-driven development
-- **Architecture**: modularity, separation of concerns, API design
-
-> ⚠️ Unlike HPC concepts (MPI, OpenMP, CUDA) that AI readily suggests when needed, this high-level wisdom represents a **mindset** that doesn't emerge naturally from vibe coding alone. Invest in learning these fundamentals separately.
+**The Loop**: Test → LLM verifies → Review proof → Repeat. Never touch code—if unhappy, add more tests!
 
 ---
 
 ## Step 0: Set the Context
 
-Before writing any code, prime your AI assistant with the right context.
+Give your AI the context it needs before starting.
 
 ### Project Setup Files
 Create persistent context files that the AI reads automatically:
@@ -106,7 +80,7 @@ AI assistants have limited memory. For large codebases:
 
 ## Step 1: Make a Plan
 
-Planning can be done interactively with your AI assistant. Ask it to outline the approach before diving into implementation.
+Plan interactively with AI. Ask it to outline the approach before coding.
 
 ### Scaffolding Suggestions
 Let the AI handle boilerplate and setup:
@@ -134,17 +108,28 @@ Before implementation, ask the AI to:
 4. **If not satisfied** — write another test that expresses your intuition more precisely
 5. **Repeat** until all your tests pass and you trust the result
 
-> The key insight: Express your knowledge through tests, not by editing code. Your domain expertise becomes test cases.
+> Express your knowledge through tests, not by editing code. Your domain expertise becomes test cases.
 
 ---
 
 ## Step 3: Document & Release
 
-Let AI handle the busywork:
+Let AI do the tedious parts:
 
 1. **Document** — Ask AI to generate README, API docs, and architecture diagrams. You are the first user of your package, provide use cases, let AI to include them in the documentation, iterate until you are satisfied.
 2. **Version** — Bump version ([semver](https://semver.org/)), update changelog
-3. **Publish** — Register on PyPI, crates.io, npm, etc.
+3. **Publish** — Register on PyPI, crates.io, npm, etc. (these all can be automated!)
 4. **Tag** — Create GitHub Release with notes
 
-> For teams: You own what you commit. Note AI-generated parts in PRs and agree on verification standards.
+---
+
+## Going Deeper: Why Fundamentals Still Matter
+
+You still need fundamentals. Paradoxically, **conceptual understanding becomes more important** when you stop writing code—you need to recognize good solutions, catch AI mistakes, and guide AI toward better approaches.
+
+- **Math & Domain Knowledge** — Essential for validating AI output in your field
+- **Algorithmic Thinking** — Paradigms (greedy, DP, divide-and-conquer), optimization techniques, knowing when to guide AI
+- **Computational Theory** — Complexity (Big-O), hardness classes (P, NP), foundational concepts
+- **Software Engineering** — Version control, CI/CD, testing, modularity, API design
+
+> ⚠️ Unlike HPC concepts (MPI, OpenMP, CUDA) that AI readily suggests, these fundamentals represent a **mindset** that doesn't emerge from vibe coding alone. Learn them separately.
