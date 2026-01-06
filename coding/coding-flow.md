@@ -3,53 +3,38 @@
 **Vibe coding** is a development style where you describe what you want in natural language and let AI coding assistants (Claude Code, Cursor, GitHub Copilot, etc.) generate the implementation. This guide helps scientists and researchers adopt vibe coding effectively—shipping working code faster while maintaining quality and understanding.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '28px', 'fontFamily': 'system-ui' }}}%%
 flowchart LR
     subgraph Human["👤 Human"]
-        HLW["🧠 High-Level Wisdom<br/><i>algorithms, theory,<br/>architecture</i>"]
-        CTX["📋 Context<br/><i>goals, constraints,<br/>tech stack</i>"]
-        TC["🧪 Test Cases<br/><i>edge cases, benchmarks,<br/>expected behavior</i>"]
-    end
-
-    subgraph LLM["🤖 LLM"]
         direction TB
-        GEN["⚡ Generation"]
-        VER["🔍 Verification"]
+        T[🧪 Test]
+        PR[✅ Proof]
     end
 
-    subgraph Output["📤 Output"]
-        CODE["💻 Code<br/><i>implementation,<br/>docs, tests</i>"]
-        RESULT["✅ Result<br/><i>pass/fail, errors,<br/>explanations</i>"]
+    subgraph AI["🤖 LLM"]
+        direction TB
     end
 
-    HLW --> GEN
-    CTX --> GEN
-    GEN --> CODE
-    
-    CODE -.->|"review & iterate"| CTX
-    
-    TC --> VER
-    CODE --> VER
-    VER --> RESULT
-    
-    RESULT -.->|"debug loop"| CTX
+    subgraph Env["💻 Software"]
+        direction TB
+        C[Code]
+        GH[GitHub]
+    end
+
+    T --> AI
+    AI --> C
+    GH --> AI
+    AI --> PR
 
     style Human fill:#e8f4f8,stroke:#5ba3c0,stroke-width:2px,color:#2c5f7c
-    style LLM fill:#4a5568,stroke:#2d3748,stroke-width:2px,color:#fff
-    style Output fill:#f0fff4,stroke:#68d391,stroke-width:2px,color:#276749
+    style AI fill:#4a5568,stroke:#2d3748,stroke-width:2px,color:#fff
+    style Env fill:#f0fff4,stroke:#68d391,stroke-width:2px,color:#276749
     
-    style HLW fill:#fff,stroke:#5ba3c0,color:#2c5f7c
-    style CTX fill:#fff,stroke:#5ba3c0,color:#2c5f7c
-    style TC fill:#fff,stroke:#5ba3c0,color:#2c5f7c
+    style T fill:#fff,stroke:#5ba3c0,color:#2c5f7c
+    style PR fill:#fff,stroke:#5ba3c0,color:#2c5f7c
+    style C fill:#fff,stroke:#68d391,color:#276749
+    style GH fill:#fff,stroke:#68d391,color:#276749
     
-    style GEN fill:#6b7280,stroke:#4a5568,color:#fff
-    style VER fill:#6b7280,stroke:#4a5568,color:#fff
-    
-    style CODE fill:#fff,stroke:#68d391,color:#276749
-    style RESULT fill:#fff,stroke:#68d391,color:#276749
-
-    linkStyle 0,1,2,4,5,6 stroke:#4a5568,stroke-width:3px
-    linkStyle 3,7 stroke:#e53e3e,stroke-width:2px,stroke-dasharray:5
+    linkStyle 0,1,2,3 stroke:#4a5568,stroke-width:2px
 ```
 
 **The Loop**: You provide *context* and *high-level wisdom* → LLM generates *code* → You supply *test cases* → LLM produces *verification* → Iterate until satisfied.
