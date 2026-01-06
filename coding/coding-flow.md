@@ -6,8 +6,15 @@
 Before introducing the coding flow, I want to share some high level wisdom about coding. Even though by talking to AI, we can code easily, surprisingly, the philosophical thinking, including **math**, **algorithm**, **computational theory**, **modern software engineering** etc. are even more important in the era of vibe coding.
 - math is domain specific. I will not touch on it in this flow.
 - for algorithms, you must be familiar with common design patterns, such as greedy, dynamic programming, branching, optimization, integer programming et al.
-- for computational theory, you must be familiar with common concepts, such as time complexity, space complexity, big O notation, etc. You should also understand the classification of computational hardness, such as P, NP, NP-complete, NP-hard, etc. You should be familiar with computational concepts, such as expression tree, Turing machine et al.
-- for modern software engineering, you must be familiar with common tools, such as version control, code review, continuous integration, continuous deployment, etc. You should also understand the principles of software development, such as agile, scrum, waterfall, etc. You should be familiar with some common HPC concepts, such as MPI, OpenMP, CUDA, OpenCL, etc.
+- for computational theory,
+  - You must be familiar with common concepts, such as time complexity, space complexity, big O notation, etc.
+  - You should also understand the classification of computational hardness, such as P, NP, NP-complete, NP-hard, etc.
+  - You should be familiar with computational concepts, such as expression tree, Turing machine et al.
+- for modern software engineering,
+  - You must be familiar with common tools, such as version control, code review, continuous integration, continuous deployment, etc.
+  - You should also understand the principles of software development, such as agile, scrum, waterfall, etc.
+
+Unfortunately, these high-level wisdom does not happen naturally no matter how long you vibe code. Unlike common HPC concepts, such as MPI, OpenMP, CUDA, OpenCL that AI can always recommend you to use when you have the need. These high level wisdom does not correspond to a single need, but a general mindset that you should have when you code.
 
 ---
 
