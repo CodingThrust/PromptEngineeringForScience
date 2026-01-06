@@ -3,31 +3,29 @@
 **Vibe coding** is a development style where you describe what you want in natural language and let AI coding assistants (Claude Code, Cursor, GitHub Copilot, etc.) generate the implementation. This guide helps scientists and researchers adopt vibe coding effectively—shipping working code faster while maintaining quality and understanding.
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph Human["👤 Human"]
-        direction TB
         T[🧪 Test]
         PR[✅ Proof]
     end
 
     subgraph AI["🤖 LLM"]
-        direction TB
     end
 
-    subgraph Env["💻 Software"]
-        direction TB
-        C[Code]
+    subgraph Soft["💻 Software"]
+        C[Code & Interpreter]
         GH[GitHub]
     end
 
     T --> AI
-    AI --> C
-    GH --> AI
+    AI <--> C
+    GH <--> AI
     AI --> PR
+    PR -.->|🔄| T
 
     style Human fill:#e8f4f8,stroke:#5ba3c0,stroke-width:2px,color:#2c5f7c
     style AI fill:#4a5568,stroke:#2d3748,stroke-width:2px,color:#fff
-    style Env fill:#f0fff4,stroke:#68d391,stroke-width:2px,color:#276749
+    style Soft fill:#f0fff4,stroke:#68d391,stroke-width:2px,color:#276749
     
     style T fill:#fff,stroke:#5ba3c0,color:#2c5f7c
     style PR fill:#fff,stroke:#5ba3c0,color:#2c5f7c
@@ -35,6 +33,7 @@ flowchart LR
     style GH fill:#fff,stroke:#68d391,color:#276749
     
     linkStyle 0,1,2,3 stroke:#4a5568,stroke-width:2px
+    linkStyle 4 stroke:#e53e3e,stroke-width:2px
 ```
 
 **The Loop**: You provide *context* and *high-level wisdom* → LLM generates *code* → You supply *test cases* → LLM produces *verification* → Iterate until satisfied.
