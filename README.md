@@ -15,7 +15,6 @@ Human-AI collaboration workflows for scientific tasks.
 |----------|-------|
 | [Paper Writing](paper-writing/flow.md) | Literature → Plan → Draft → Polish |
 | [Coding](coding/coding-flow.md) | Build · Debug · Explain |
-| Research | Literature review · Gap identification |
 | Teaching | Slides · Quiz · Homework · Exam · Evaluation |
 | MCP | Build AI tool servers |
 
